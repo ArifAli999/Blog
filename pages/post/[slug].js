@@ -14,7 +14,7 @@
     const router = useRouter();
   
     if (router.isFallback) {
-      return <Loader />;
+      return console.log('nulll');
     }
   console.log(post)
     return (
