@@ -22,7 +22,7 @@ export default function Home({ posts }) {
 
 const swiperItems = posts.map((p) => {
   return (
-    <SwiperSlide key={p.node.slug}  className="   md:h-full md:!w-96  !w-screen ml-0 md:ml-5 md:mt-5 mb-10 flex flex-col gap-0 "
+    <SwiperSlide key={p.node.slug}  className="   md:!h-full md:!w-96 !w-screen ml-0 md:ml-5 md:mt-0  p-0   mb-0 flex flex-col gap-0 "
   >
    <main className=' w-full bg-red-500 relative'>
       <Image  
@@ -59,17 +59,22 @@ const swiperItems = posts.map((p) => {
 
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div className=' bg-black p-0 min-h-screen w-full '>
+    <div className=' bg-black p-0 min-h-screen w-full flex flex-col py-0'>
+    <div className='border-b mb-0 border-gray-600 p-4 w-full flex justify-between items-center'>
+    
+    <span className='text-purple-100 font-light text-lg'>the   <span className='text-purple-600 font-bold'>'purple'</span> experience</span>
+    </div>
+    <div className='p-4'>
 
         <Swiper
           slidesPerView="auto"
           spaceBetween={10}
-          className='   !grid !grid-flow-col !auto-cols-max p-0 !gap-2 '>
+          className='   !grid !grid-flow-col !auto-cols-max p-0 !gap-2 w-full h-full '>
 
           {swiperItems}
 
         </Swiper>
-
+        </div>
         {/**  <div className='column'>
 {/** <PostWidget/>
   </div>
