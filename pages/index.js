@@ -22,21 +22,21 @@ export default function Home({ posts }) {
 
 const swiperItems = posts.map((p) => {
   return (
-    <SwiperSlide key={p.node.slug}  className="  h-full bg-red   ml-5 mt-5 mb-5 !w-96 flex flex-col gap-0 "
+    <SwiperSlide key={p.node.slug}  className=" h-screen  md:h-full md:!w-96   ml-5 mt-5 mb-5 flex flex-col gap-0 "
   >
-   <main className='w-full  '>
+   <main className=' w-full '>
       <Image  
         width={300} height={400} layout="responsive" objectFit="fill"
         src={p.node.featuredImage.url} alt={p.node.title} 
-        className="w-full md:w-full  object-fill">
+        className="h-full md:w-full  object-fill">
 
       </Image>
       </main>
 
 
-      <main className='w-fit flex h-full items-center  justify-between gap-10 p-0.5 '>
-        <section className='text-center p-3 inline-block'>
-          <span className='text-white text-4xl inline-block align-middle'>{moment(p.node.createdAt).format('MM')}</span>
+      <main className='w-full flex h-full items-center  justify-between gap-0 md:gap-10 p-0.5 '>
+        <section className='text-center p-2 md:p-3 inline-block'>
+          <span className='text-white text-base md:text-4xl inline-block align-middle'>{moment(p.node.createdAt).format('MM')}</span>
         </section>
 
         <section className='w-full h-full flex items-center mb-5  p-2'>
@@ -57,12 +57,12 @@ const swiperItems = posts.map((p) => {
       <meta name="description" content="The Riffy raff experience." />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div className=' bg-black p-0 min-h-screen'>
+    <div className=' bg-black p-0 min-h-screen w-full'>
 
         <Swiper
-          slidesPerView={3}
-          spaceBetween={20}
-          className=' w-screen  md:w-full  z-99 min-h-96 cust grid grid-flow-col auto-cols-max p-0 '>
+          slidesPerView="auto"
+          spaceBetween={10}
+          className='   !grid !grid-flow-col !auto-cols-max p-0 !gap-2 '>
 
           {swiperItems}
 
