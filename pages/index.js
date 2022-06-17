@@ -62,7 +62,7 @@ const swiperItems = posts.map((p) => {
     <div className=' bg-black p-0 min-h-screen w-full flex flex-col py-0'>
     <div className='border-b mb-0 border-gray-600 p-4 w-full flex justify-between items-center'>
     
-    <span className='text-purple-100 font-light text-lg'>the   <span className='text-purple-600 font-bold'>'purple'</span> experience</span>
+    <span className='text-purple-100 font-light text-lg'>the   <span className='text-purple-600 font-bold'>&apos;purple&apos;</span> experience</span>
     </div>
     <div className='p-4'>
 
