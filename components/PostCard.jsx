@@ -2,48 +2,55 @@ import React from 'react'
 import moment from 'moment'
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+
 
 const PostCard = ({ post }) => {
   console.log(post)
   return (
     
 
-    <div className='post-card-container column'>
 
+<SwiperSlide className=' bg-red-500    w-full flex-1  '>
 
-      <div className='image-container'> <motion.img whileHover={{
+    <div className='flex-1'>
+      <img whileHover={{
         opacity: 0.4,
         scale: 0.9,
         transition: { duration: 1 },
       }} whileTap={{ scale: 1, opacity: 1 }}
-        src={post.featuredImage.url} alt={post.title} className="post-fimg">
+      
+        src={post.featuredImage.url} alt={post.title} 
+        className="w-full md:w-96 h-96 object-cover">
 
-      </motion.img></div>
+      </img>
+      </div>
 
 
-      <ul className='flexer-ul'>
-        <li className='flexed'>
+      <div className='w-full flex  justify-center h-fit '>
+        <div className=''>
           <span className='date'>{moment(post.createdAt).format('MM')}</span>
-        </li>
-        <li className='flexed'>
-          <p className='post-excerpt'>
-            {post.excerpt}
+        </div>
+
+        <div className='w-full h-full '>
+          <p className='text-base break-words	  text-white'>
+          {post.excerpt}
           </p>
-        </li>
-
-      </ul>
-
-
-
-
-
-      <Link href={`/post/${post.slug}`}>
-        <button className='transparent'> </button>
+        </div>
+        <Link href={`/post/${post.slug}`}>
+        <button className=''> Read More</button>
       </Link>
+      </div>
+
+    
 
 
 
-    </div>
+  
+
+
+      </SwiperSlide>
 
   )
 }
