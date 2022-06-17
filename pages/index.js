@@ -22,13 +22,13 @@ export default function Home({ posts }) {
 
 const swiperItems = posts.map((p) => {
   return (
-    <SwiperSlide key={p.node.slug}  className=" h-screen  md:h-full md:!w-96   ml-5 mt-5 mb-5 flex flex-col gap-0 "
+    <SwiperSlide key={p.node.slug}  className="   md:h-full md:!w-96  !w-screen ml-2 md:ml-5 md:mt-5 mb-10 flex flex-col gap-0 "
   >
-   <main className=' w-full '>
+   <main className=' w-full bg-red-500 relative'>
       <Image  
         width={300} height={400} layout="responsive" objectFit="fill"
         src={p.node.featuredImage.url} alt={p.node.title} 
-        className="h-full md:w-full  object-fill">
+        className="!h-60 md:w-full  object-fill">
 
       </Image>
       </main>
@@ -61,7 +61,7 @@ const swiperItems = posts.map((p) => {
 
         <Swiper
           slidesPerView="auto"
-          spaceBetween={10}
+          spaceBetween={20}
           className='   !grid !grid-flow-col !auto-cols-max p-0 !gap-2 '>
 
           {swiperItems}
