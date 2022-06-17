@@ -29,7 +29,8 @@ const swiperItems = posts.map((p) => {
         width={500} height={600} layout="responsive" objectFit="cover"
         src={p.node.featuredImage.url} alt={p.node.title} 
         className=" md:w-full  object-fill"
-        quality={100}/>
+        quality={100}
+        placeholder="blur"/>
           
      
       </main>
