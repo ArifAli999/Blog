@@ -24,13 +24,14 @@ const swiperItems = posts.map((p) => {
   return (
     <SwiperSlide key={p.node.slug}  className="   md:!h-full md:!w-96 !w-screen ml-0 md:ml-5 md:mt-0  p-0   mb-0 flex flex-col gap-0 "
   >
-   <main className=' w-full bg-red-500 relative'>
+   <main className=' w-full   '>
       <Image  
-        width={300} height={400} layout="responsive" objectFit="fill"
+        width={500} height={600} layout="responsive" objectFit="cover"
         src={p.node.featuredImage.url} alt={p.node.title} 
-        className="!h-60 md:w-full  object-fill">
-
-      </Image>
+        className=" md:w-full  object-fill"
+        quality={100}/>
+          
+     
       </main>
 
 
