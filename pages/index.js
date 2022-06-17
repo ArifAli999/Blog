@@ -54,7 +54,7 @@ const swiperItems = posts.map((p) => {
 
       <><Head>
       <title>My blog</title>
-      <meta name="description" content="The Riffy raff experience." />
+     <meta name="apple-mobile-web-app-status-bar-style" content="black">
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className=' bg-black p-0 min-h-screen w-full'>
