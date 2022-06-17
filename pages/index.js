@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import moment from 'moment';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const variants = {
@@ -21,19 +22,15 @@ export default function Home({ posts }) {
 
 const swiperItems = posts.map((p) => {
   return (
-    <SwiperSlide key={p.node.slug}  className="  h-full bg-red   ml-5 mt-10 !w-96 flex flex-col gap-0 "
+    <SwiperSlide key={p.node.slug}  className="  h-full bg-red   ml-5 mt-5 mb-5 !w-96 flex flex-col gap-0 "
   >
-   <main className='w-full '>
-      <img whileHover={{
-        opacity: 0.4,
-        scale: 0.9,
-        transition: { duration: 1 },
-      }} whileTap={{ scale: 1, opacity: 1 }}
-      
+   <main className='w-full  '>
+      <Image  
+        width={300} height={400} layout="responsive" objectFit="fill"
         src={p.node.featuredImage.url} alt={p.node.title} 
-        className="w-full md:w-full h-96 object-cover">
+        className="w-full md:w-full  object-fill">
 
-      </img>
+      </Image>
       </main>
 
 
