@@ -42,7 +42,7 @@ const swiperItems = posts.map((p) => {
       </main>
 
 
-      <main className='relative   md:w-full flex h-full items-center justify-between -mt-2 md:mt-0 gap-2 md:gap-2 md:p-1 p-0'>
+      <main className='relative   md:w-full flex h-full items-center justify-between -mt-2 md:mt-0 gap-2 md:gap-2 md:p-1 p-0 group'>
         <section className='text-center p-1 md:p-2 inline-block'>
           <span className='text-violet-600 text-3xl font-black  md:text-4xl inline-block align-middle'>{moment(p.node.createdAt).format('MM')}</span>
         </section>
@@ -54,7 +54,7 @@ const swiperItems = posts.map((p) => {
         </section>
      
       </main>
-      <span className='absolute right-10 md:right-2 bottom-0 text-white'>
+      <span className='absolute right-10 md:right-2 bottom-0 text-white group-hover:text-black transition-all'>
           <AiOutlineArrowRight size={24}/>
         </span>
     </SwiperSlide>
@@ -70,13 +70,14 @@ const swiperItems = posts.map((p) => {
 
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div className=' bg-black p-0 min-h-screen w-full flex flex-col py-0 justify-between h-full'>
+    <div className=' bg-black p-0 min-h-screen w-full  py-0  h-full'>
 
     <div className='border-b mb-0 border-gray-600 p-4 w-full flex justify-between items-center shadow-sm drop-shadow-lg shadow-gray-700'>
     
     <span className='text-purple-100 font-extralight text-lg font-rale group cursor-pointer hover:text-white'>the &nbsp;<span className='text-violet-400 group-hover:text-violet-600 group-hover:-top-1 transition-all duration-500 ease-in-out font-bold relative top-1'>&apos;purple&apos;</span>&nbsp; experience</span>
     </div>
-    <div className='p-4'>
+
+    <div className='p-4 mx-auto flex items-center'>
 
         <Swiper
           slidesPerView="auto"

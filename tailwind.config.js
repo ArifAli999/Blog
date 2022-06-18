@@ -9,6 +9,15 @@ module.exports = {
         'rale': ["Raleway", 'sans-serif'],
        
       },
+      height: {
+        '128': '600px',
+      },
+      height: {
+        '100': '500px',
+      },
+      width: {
+        '100': '500px',
+      },
     },
   },
   plugins: [],
