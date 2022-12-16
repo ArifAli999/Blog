@@ -32,8 +32,8 @@ const swiperItems = posts.map((p) => {
         className=" md:w-full  object-fill rounded"
         quality={100}
         />
-                <div className="group absolute top-0 right-0 bottom-0 left-0 w-full h-full  bg-fixed opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-purple-700 flex items-center justify-center">
-                  <p className='text-4xl z-99 p-4 text-purple-50 uppercase font-black text-center group-hover:-translate-y-6	cursor-pointer hover:text-black opacity-100 transition-all duration-700 '><span className='text-6xl p-2'>&apos;</span>READ MORE 
+                <div className="group absolute top-0 right-0 bottom-0 left-0 w-full h-full  bg-fixed opacity-0 hover:opacity-80 transition duration-300 ease-in-out bg-black/80 flex items-center justify-center">
+                  <p className='text-4xl z-99 p-4 text-purple-50 uppercase font-black text-center group-hover:-translate-y-6	cursor-pointer hover:text-white opacity-100 transition-all duration-700 '><span className='text-6xl p-2'>&apos;</span>READ MORE 
                   <span className='text-6xl p-2'>&apos;</span>
                   </p>
                 </div>
@@ -48,13 +48,13 @@ const swiperItems = posts.map((p) => {
         </section>
 
         <section className='w-full break-words  md:w-full h-full flex items-center mt-0  md:p-3 p-2'>
-          <p className='text-sm leading-loose	md:leading-tight align-middle font-light   font-rale  text-gray-200'>
+          <p className='text-sm leading-loose	md:leading-tight align-middle font-thin   font-rale  text-gray-200'>
           {p.node.excerpt}
           </p>
         </section>
      
       </main>
-      <span className='absolute right-10 md:right-2 bottom-0 text-white group-hover:text-black transition-all'>
+      <span className='absolute right-20 md:right-6 bottom-0 text-white group-hover:text-black transition-all'>
           <AiOutlineArrowRight size={24}/>
         </span>
     </SwiperSlide>
